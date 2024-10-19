@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: subdomain-4cc090d2-2c86-4ab5-881a-18d2aa37873a-ingress
+  namespace: subdomain-4cc090d2-2c86-4ab5-881a-18d2aa37873a
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+  - host: sovannlyna-subdomain.tinhlgkiddy.fun
+    http:
+      paths:
+      - path: /
+        pathType: Prefix  
+        backend:
+          service:
+            name: subdomain-4cc090d2-2c86-4ab5-881a-18d2aa37873a-service 
+            port:
+              number: 8082
